@@ -2,24 +2,19 @@ import java.util.Scanner;
 
 public class TP03 {
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+    public static void main(final String[] args) {
+       Scanner input = new Scanner(System.in);
+       //input
+       int n = input.nextInt();
+       int t = input.nextInt();
 
-        int x, y;
+       //process
+       int totalOrang = t + 1;
+       int bagi       = n / totalOrang;
+       int sisa       = n % totalOrang;
 
-        System.out.print("Masukkan nilai x: ");
-        x = input.nextInt();
-
-        System.out.print("Masukkan nilai y: ");
-        y = input.nextInt();
-
-        if (y == 0) {
-            System.out.println("Tidak bisa dibagi dengan nol!");
-        } else {
-            System.out.println("Hasil pembagian: " + (x / y));
-            System.out.println("Sisa pembagian  : " + (x % y));
-        }
-
-        input.close();
+       //output
+       System.out.println(bagi);
+       System.out.println(sisa);
     }
 }
