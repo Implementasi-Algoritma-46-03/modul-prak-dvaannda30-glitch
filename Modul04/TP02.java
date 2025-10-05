@@ -9,7 +9,7 @@ public class TP02 {
 
         // hitung diskon (jika ada)
         double diskon = 0;
-        if (N > 2 00000) {
+        if (N > 200000) {
             diskon = N * 0.05; // 5%
         }
 
