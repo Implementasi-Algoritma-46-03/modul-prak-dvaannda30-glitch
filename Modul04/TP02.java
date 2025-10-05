@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class TP02 {
-
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         int N = input.nextInt();
@@ -13,11 +12,9 @@ public class TP02 {
         }
 
         double total = N - diskon;
-
         double ppn = total * 0.11;
-
         double totalBayar = total + ppn;
-
+        
         System.out.println("Transaksi = " + N);
         if (diskon > 0) {
             System.out.println("Total =" + N + " - " + (int)diskon);
