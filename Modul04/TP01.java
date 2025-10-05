@@ -6,9 +6,9 @@ public class TP01 {
         Scanner input = new Scanner(System.in);
 
         int N = input.nextInt();
-        
+
         if (N % 6 == 0) {
-            System.out.println("Kelipatan Enam");
+            System.out.println("Kelipatan enam");
         } else {
             System.out.println("Bukan kelipatan enam");
         }
