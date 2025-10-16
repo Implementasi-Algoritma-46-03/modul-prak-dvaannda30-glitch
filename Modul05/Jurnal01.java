@@ -26,7 +26,7 @@ public class Jurnal01 {
             harga = 23000/1000;
         }
         int totalHarga = jumlahPesanan * harga;
-        System.out.println(menu + "" + jumlahPesanan + "buah, total harga Rp." + harga + ".000");
+        System.out.println(menu + " " + jumlahPesanan + " buah, total harga Rp. " + totalHarga + ".000");
                                                                                                                                                                                                                                                                             
     }
 }
