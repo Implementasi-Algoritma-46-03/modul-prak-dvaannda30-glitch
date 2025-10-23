@@ -41,7 +41,7 @@ public class TP03 {
     }
 
     //persegi panjang.
-    
+     
     private static void hitungPersegiPanjang(int panjang, int lebar) {
         int luas = panjang * lebar;
         int keliling = 2 * (panjang + lebar);
@@ -62,5 +62,5 @@ public class TP03 {
         double luas = PI * jariJari * jariJari;
         double keliling = PI * diameter;
         System.out.printf("%.2f %.2f\n", luas, keliling);
-    }
+    }
 }
