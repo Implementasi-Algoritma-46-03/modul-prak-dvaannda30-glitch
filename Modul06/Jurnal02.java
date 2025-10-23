@@ -1,33 +1,59 @@
-import java.util.Scanner;
 public class Jurnal02 {
 
     public static void main(final String[] args) {
         Scanner input = new Scanner(System.in);
         String lagu = input.nextLine();
-        lirik(lagu);
-    }
-    
 
-    private static void lirik(String lagu) {
-        String lirik = lagu;
-        int teks = lirik.length();
-        switch (teks % 5) {
+        System.out.println(vokal2(vokal1(lagu)));
+    }
+
+    private static String vokal1(String lagu) {
+        int sisaBagi = lagu.length() % 5;
+        String hasil = null; 
+
+        switch (sisaBagi) {
             case 0:
-                lirik = lirik.replaceAll("[AIUEOaiueo]", "a");
+                hasil = lagu.replaceAll("[aiueo]", "a");
                 break;
             case 1:
-                lirik = lirik.replaceAll("[AIUEOaiueo]", "e");
+                hasil = lagu.replaceAll("[aiueo]", "e");
                 break;
             case 2:
-                lirik = lirik.replaceAll("[AIUEOaiueo]", "i");
+                hasil = lagu.replaceAll("[aiueo]", "i");
                 break;
             case 3:
-                lirik = lirik.replaceAll("[AIUEOaiueo]", "o");
+                hasil = lagu.replaceAll("[aiueo]", "o");
                 break;
             case 4:
-                lirik = lirik.replaceAll("[AIUEOaiueo]", "u");
+                hasil = lagu.replaceAll("[aiueo]", "u");
                 break;
         }
-        System.out.println(lirik);
+
+        return hasil;
+    }
+
+    private static String vokal2(String vokal1) {
+        int sisaBagi = vokal1.length() % 5;
+        String hasil = null;
+
+        switch (sisaBagi) {
+            case 0:
+                hasil = vokal1.replaceAll("[AIUEO]", "A");
+                break;
+            case 1:
+                hasil = vokal1.replaceAll("[AIUEO]", "E");
+                break;
+            case 2:
+                hasil = vokal1.replaceAll("[AIUEO]", "I");
+                break;
+            case 3:
+                hasil = vokal1.replaceAll("[AIUEO]", "O");
+                break;
+            case 4:
+                hasil = vokal1.replaceAll("[AIUEO]", "U");
+                break;
+        }
+
+        return hasil;
     }
 }
