@@ -1,59 +1,50 @@
+import java.util.Scanner;//tes
+
 public class Jurnal02 {
+
+    // Method untuk mengganti huruf vokal
+    public static String vokalKecil(String teks) {
+         int panjang = teks.length();
+         int panjangTeks = panjang % 5;
+         switch (panjangTeks) {
+            case 0:
+            return teks.replaceAll("[aiueo]", "a");
+            case 1:
+            return teks.replaceAll("[aiueo]", "e");
+            case 2:
+            return teks.replaceAll("[aiueo]", "i");
+            case 3:
+            return teks.replaceAll("[aiueo]", "o");
+            case 4:
+            return teks.replaceAll("[aiueo]", "u");
+        } return null;
+    }
+
+    public static String vokalBesar(String teks) {
+         int panjang = teks.length();
+         int panjangTeks = panjang % 5;
+         switch (panjangTeks) {
+            case 0:
+            return teks.replaceAll("[AIUEO]", "A");
+            case 1:
+            return teks.replaceAll("[AIUEO]", "E");
+            case 2:
+            return teks.replaceAll("[AIUEO]", "I");
+            case 3:
+            return teks.replaceAll("[AIUEO]", "O");
+            case 4:
+            return teks.replaceAll("[AIUEO]", "U");
+        } return null;
+    }
 
     public static void main(final String[] args) {
         Scanner input = new Scanner(System.in);
-        String lagu = input.nextLine();
+        
+        String lirik = input.nextLine();
+        String hasil1 = vokalKecil(lirik);
+        String hasil2 = vokalBesar(hasil1);
+        System.out.println(hasil2);
 
-        System.out.println(vokal2(vokal1(lagu)));
-    }
-
-    private static String vokal1(String lagu) {
-        int sisaBagi = lagu.length() % 5;
-        String hasil = null; 
-
-        switch (sisaBagi) {
-            case 0:
-                hasil = lagu.replaceAll("[aiueo]", "a");
-                break;
-            case 1:
-                hasil = lagu.replaceAll("[aiueo]", "e");
-                break;
-            case 2:
-                hasil = lagu.replaceAll("[aiueo]", "i");
-                break;
-            case 3:
-                hasil = lagu.replaceAll("[aiueo]", "o");
-                break;
-            case 4:
-                hasil = lagu.replaceAll("[aiueo]", "u");
-                break;
-        }
-
-        return hasil;
-    }
-
-    private static String vokal2(String vokal1) {
-        int sisaBagi = vokal1.length() % 5;
-        String hasil = null;
-
-        switch (sisaBagi) {
-            case 0:
-                hasil = vokal1.replaceAll("[AIUEO]", "A");
-                break;
-            case 1:
-                hasil = vokal1.replaceAll("[AIUEO]", "E");
-                break;
-            case 2:
-                hasil = vokal1.replaceAll("[AIUEO]", "I");
-                break;
-            case 3:
-                hasil = vokal1.replaceAll("[AIUEO]", "O");
-                break;
-            case 4:
-                hasil = vokal1.replaceAll("[AIUEO]", "U");
-                break;
-        }
-
-        return hasil;
+        input.close();
     }
 }
