@@ -1,6 +1,21 @@
-public class TP01 {
+import java.util.Scanner;
 
-    public static void main(final String[] args) {
-        // Kerjakan soalnya di sini
+public class TP01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int[][] A = new int[N][N];
+
+        int total = 0;
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                A[i][j] = sc.nextInt();
+                total += A[i][j];
+            }
+        }
+
+        System.out.println(total);
     }
 }
